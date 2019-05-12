@@ -4,6 +4,7 @@ import com.mycompany.jukebox.JukeboxInterface;
 import com.mycompany.jukebox.PlaylistEditorInterface;
 import com.mycompany.jukebox.Song;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Component
 public class PlaylistEditorImpl implements PlaylistEditorInterface {
-    @Resource
+    @Autowired //or @Resource
     private JukeboxInterface jukebox;
 
     private List<Song> playlist = new LinkedList<>();
